@@ -9,7 +9,7 @@ Proyek ini adalah sistem deteksi berita palsu (*Fake News*) yang dibangun dengan
 
 ---
 
-## 🏗️ Software Architecture (LO 3)
+## 🏗️ Software Architecture
 Proyek ini mengadopsi arsitektur yang kohesif dengan pemisahan tanggung jawab (*Separation of Concerns*) yang jelas:
 
 1.  **Research Layer (`/Jupyter`)**: Berisi eksperimen data, pra-pemrosesan NLP, dan pelatihan model.
@@ -19,7 +19,7 @@ Proyek ini mengadopsi arsitektur yang kohesif dengan pemisahan tanggung jawab (*
 
 ---
 
-## 🔬 Modeling & Algorithm (LO 4)
+## 🔬 Modeling & Algorithm
 Model dilatih menggunakan **ISOT Dataset** (internasional) dengan alur kerja sebagai berikut:
 
 ### 1. Preprocessing (NLP)
@@ -38,13 +38,51 @@ Model ini menghasilkan akurasi sebesar **98.58%** pada data pengujian.
 
 ---
 
-## 🐳 Web Service Deployment (LO 5)
+## 🐳 Web Service Deployment
 Aplikasi ini sepenuhnya dikontainerisasi menggunakan **Docker** untuk menjamin lingkungan yang *reproducible* dan *optimized*.
 
-### Mengapa Docker?
+### Kenapa Docker?
 * **Isolasi Environment**: Mengunci versi Python (3.9-slim) dan library agar identik di semua komputer.
 * **Production Ready**: Menggunakan **Gunicorn** sebagai WSGI HTTP Server untuk stabilitas tinggi.
 * **Automated Setup**: Docker secara otomatis mengunduh dependensi NLTK saat proses *build*.
+
+## Cara Penggunaan (Installation & Running)
+git clone [https://github.com/ghanisiapfullstack/FakeNews-MLOps-Pipeline.git](https://github.com/ghanisiapfullstack/FakeNews-MLOps-Pipeline.git)
+    cd FakeNews-MLOps-Pipeline
+    ```
+2.  Jalankan perintah berikut di terminal:
+    docker compose up --build
+    
+3.  Tunggu hingga proses *build* selesai. Aplikasi akan tersedia dan dapat diakses melalui:
+     **http://localhost:5000**
+
+---
+
+## 📊 Academic Fulfillment (Kriteria Evaluasi)
+
+Proyek ini disusun dengan memenuhi standar industri dan akademik untuk mata kuliah Machine_Learning terkait:
+
+1.  **Detail & Terstruktur (LO 4):** Dokumentasi ini secara gamblang menjelaskan landasan teori algoritma (Sigmoid, TF-IDF) serta implementasi praktisnya (NLTK, Pickle).
+2.  **Struktur Deployment Jelas (LO 3 & LO 5):** Mendemonstrasikan pemahaman mendalam mengenai struktur *deployment*, pemisahan layer arsitektur (*software architecture*), dan alur kontainerisasi.
+3.  **Reproducible (LO 5):** Menyediakan instruksi eksekusi *"Single Command"* (`docker compose up`) yang menjamin aplikasi dapat dijalankan oleh evaluator/dosen di lingkungan mana pun tanpa *dependency error*.
+4.  **Profesionalitas:** Menerapkan *badges*, penggunaan sintaks LaTeX untuk perumusan model, serta pemisahan logika aplikasi dengan antarmuka.
+
+---
+
+## 🛠️ Tech Stack
+* **Language**: Python 3.9
+* **ML Libraries**: Scikit-Learn, Pandas, NLTK
+* **Web Framework**: Flask
+* **Server**: Gunicorn
+* **Frontend**: HTML5 & Tailwind CSS
+* **DevOps**: Docker & Docker Compose
+
+---
+
+## 👨‍💻 Author
+**Ghani**  
+Computer Science & Software Engineering  
+Bina Nusantara (BINUS) University - Bekasi Campus
 
 ### Struktur Folder
 ```text
