@@ -48,8 +48,9 @@ Aplikasi ini sepenuhnya dikontainerisasi menggunakan **Docker** untuk menjamin l
 
 ## Cara Penggunaan (Installation & Running)
 git clone [https://github.com/ghanisiapfullstack/FakeNews-MLOps-Pipeline.git](https://github.com/ghanisiapfullstack/FakeNews-MLOps-Pipeline.git)
-    cd FakeNews-MLOps-Pipeline
-    ```
+
+1.   cd FakeNews-MLOps-Pipeline
+
 2.  Jalankan perintah berikut di terminal:
     docker compose up --build
     
