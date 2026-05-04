@@ -1,0 +1,5 @@
+flask
+scikit-learn
+pandas
+nltk
+gunicorn #server standar industri untuk menjalankan Flask di dalam Docker agar lebih stabil daripada app.run().

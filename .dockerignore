@@ -1,0 +1,5 @@
+env_ml/
+Jupyter/
+__pycache__/
+*.csv
+.git

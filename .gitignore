@@ -1,0 +1,11 @@
+# Abaikan dataset yang berat
+*.csv
+
+# Abaikan environment & cache
+env_ml/
+__pycache__/
+.vscode/
+.DS_Store
+
+# Abaikan file model lama 
+*.pkl.bak
