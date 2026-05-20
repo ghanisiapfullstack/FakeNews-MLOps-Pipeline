@@ -5,7 +5,7 @@
 [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Proyek ini adalah sistem deteksi berita palsu (*Fake News*) yang dibangun dengan pendekatan **MLOps** (Machine Learning Operations). Sistem ini mencakup seluruh siklus hidup pengembangan, mulai dari riset data, pelatihan model, hingga pengembangan Web Service yang dikontainerisasi menggunakan Docker.
+Proyek ini adalah sistem deteksi berita palsu (*Fake News*) yang dibangun dengan pendekatan **MLOps** (Machine Learning Operations). Sistem ini mencakup seluruh siklus  pengembangan, mulai dari riset data,preprocessing data, pelatihan model, hingga pengembangan Web Service yang dikontainerisasi menggunakan Docker.
 
 ---
 
@@ -79,12 +79,6 @@ Proyek ini disusun dengan memenuhi standar industri dan akademik untuk mata kuli
 * **DevOps**: Docker & Docker Compose
 
 ---
-
-## 👨‍💻 Author
-**Ghani**  
-Computer Science & Software Engineering  
-Bina Nusantara (BINUS) University - Bekasi Campus
-
 ### Struktur Folder
 ```text
 AOL_MACHINELEARNING/
