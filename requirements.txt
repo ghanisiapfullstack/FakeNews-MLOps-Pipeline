@@ -1,5 +1,5 @@
 flask
-scikit-learn
+scikit-learn==1.8.0
 pandas
 nltk
 gunicorn #server standar industri untuk menjalankan Flask di dalam Docker agar lebih stabil daripada app.run().

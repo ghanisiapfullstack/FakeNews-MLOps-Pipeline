@@ -1,5 +1,5 @@
 # Gunakan base image yang ringan (Optimasi LO 5)
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # Set folder kerja di dalam container
 WORKDIR /app

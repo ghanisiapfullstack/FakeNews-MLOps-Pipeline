@@ -37,22 +37,25 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        # Error Handling: Cek apakah input ada
         input_data = request.json.get('text')
         if not input_data:
             return jsonify({'error': 'Teks tidak boleh kosong!'}), 400
         
         cleaned_data = clean_text(input_data)
-        prediction = model.predict([cleaned_data])[0] # Model Predict Data
+        prediction = model.predict([cleaned_data])[0] 
         
-        result = "Real News" if prediction == 1 else "Fake News" # Resultnya
+        # Ambil probabilitas persentase
+        probabilities = model.predict_proba([cleaned_data])[0]
+        confidence_score = max(probabilities) * 100 
+        
+        # Tetapkan hasil asli tanpa persen dulu agar JS lama tidak rusak
+        result = "Real News" if prediction == 1 else "Fake News"
+        
         return jsonify({
             'status': 'success',
-            'prediction': result,
+            'prediction': result,          # Tetap "Real News" atau "Fake News" (JS kamu aman)
+            'confidence': f"{confidence_score:.2f}%", # Variabel baru untuk persentase
             'text_length': len(input_data)
         })
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 500
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
